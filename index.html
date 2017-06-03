@@ -63,7 +63,7 @@
 <span class="go">Python 2.6.4 (r264:75708, Oct 26 2009, 08:23:19) [MSC v.1500 32 bit (Intel)] on</span>
 <span class="go">win32</span>
 <span class="go">Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">cinfony</span> <span class="kn">import</span> <span class="n">obabel</span><span class="p">,</span> <span class="n">rdk</span><span class="p">,</span> <span class="n">cdk</span><span class="p">,</span> <span class="n">indy</span><span class="p">,</span> <span class="n">opsin</span><span class="p">,</span> <span class="n">webel</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">cinfony</span> <span class="kn">import</span> <span class="n">pybel</span><span class="p">,</span> <span class="n">rdk</span><span class="p">,</span> <span class="n">cdk</span><span class="p">,</span> <span class="n">indy</span><span class="p">,</span> <span class="n">opsin</span><span class="p">,</span> <span class="n">webel</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">opsinmol</span> <span class="o">=</span> <span class="n">opsin</span><span class="o">.</span><span class="n">readstring</span><span class="p">(</span><span class="s">&quot;iupac&quot;</span><span class="p">,</span> <span class="s">&quot;2,4,6-trinitrotoluene&quot;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">opsinmol</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&quot;smi&quot;</span><span class="p">)</span>
 <span class="go">&#39;[N+](=O)([O-])C1=C(C(=CC(=C1)[N+](=O)[O-])[N+](=O)[O-])C&#39;</span>
@@ -77,7 +77,7 @@
 <span class="gp">&gt;&gt;&gt; </span><span class="n">cdkdescs</span> <span class="o">=</span> <span class="n">cdk</span><span class="o">.</span><span class="n">Molecule</span><span class="p">(</span><span class="n">opsinmol</span><span class="p">)</span><span class="o">.</span><span class="n">calcdesc</span><span class="p">()</span>
 <span class="go">{&#39;WHIM.13&#39;: nan, &#39;kierHallSmarts.49&#39;: 0, &#39;kierHallSmarts.48&#39;: 0, &#39;BCUT.4&#39;: 3.783</span>
 <span class="go">4783086527555, &#39;BCUT.5&#39;: 8.8565180117573092, ...}</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">obabelmol</span> <span class="o">=</span> <span class="n">obabel</span><span class="o">.</span><span class="n">Molecule</span><span class="p">(</span><span class="n">opsinmol</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">obabelmol</span> <span class="o">=</span> <span class="n">pybel</span><span class="o">.</span><span class="n">Molecule</span><span class="p">(</span><span class="n">opsinmol</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">obabelmol</span><span class="o">.</span><span class="n">make3D</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">obabelmol</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="s">&quot;TNT&quot;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">obabelmol</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">cdkdescs</span><span class="p">)</span>
